@@ -32,7 +32,7 @@ LOCAL_CFLAGS += -DENABLE_WAIT_VEC_UPDATE=1 -DWAIT_VEC_UPDATE_TIME=6000
 # hw/<OVERLAY_HARDWARE_MODULE_ID>.<ro.product.board>.so
 
 LOCAL_C_INCLUDES += $(GRALLOC_DIR)
-LOCAL_C_INCLUDES += $(TOP)/system/core/libion/kernel-headers
+LOCAL_C_INCLUDES += $(TOP)/system/core/libion
 LOCAL_C_INCLUDES += $(BSP_TOP_DIR)/output/build/linux-custom/arch/arm64/include/generated/uapi
 
 LOCAL_SHARED_LIBRARIES += libbase libnativewindow
