@@ -21,7 +21,7 @@ LOCAL_PRELINK_MODULE := false
 LOCAL_CFLAGS :=
 
 GRALLOC_DIR := frameworks/native/include/media/openmax
-GRALLOC_DIR += vendor/arm/mali_lib/pie/include
+GRALLOC_DIR += vendor/arm/gralloc/driver/product/android/gralloc/src
 GRALLOC_DIR += vendor/socionext/sc1401aj1/OpenMAX/libomxil-prox/include
 # Additional CFLAGS for "gralloc_priv.h"
 LOCAL_CFLAGS += -DMALI_ION=1
