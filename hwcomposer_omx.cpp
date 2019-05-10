@@ -407,10 +407,14 @@ static void hwc_registerProcs(struct hwc_composer_device_1* dev,
     pdev->procs = procs;
 }
 
-static void hwc_dump(hwc_composer_device_1* dev __unused, char *buff __unused, int buff_len __unused)
+static void hwc_dump(hwc_composer_device_1* dev __unused, char *buff, int buff_len)
 {
     ATRACE_CALL();
-    ALOGI("%s:%d is called", __func__, __LINE__);
+    // ALOGI("%s:%d is called", __func__, __LINE__);
+    String8 dump = DisplayManagerLocal->Dump();
+    int copy_len = std::min((int)(buff_len-1), (int)dump.size());
+    strncpy(buff, dump.c_str(), copy_len);
+    buff[copy_len] = '\0';
 }
 
 
